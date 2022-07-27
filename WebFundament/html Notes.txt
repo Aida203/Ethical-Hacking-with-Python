@@ -1,0 +1,226 @@
+Used to define layouts for webpages. We do that using tags which tells how we want our browser 
+to look and what content we wish for it to have
+
+                   
+                Standard tags all html should have:
+
+1)Definning what the document type of the file will be =><!DOCTYPE html>
+
+2)Container tags to hold content and other html tags <html>  </html>
+The document is made up of two sections: the head and body
+
+3)The head=> <head>...</head> defines data about the document e0g title, description, attributes about the document
+like images, to import resources we need in the html files (css, js, etc)
+=> the head is like metadata (info about data) about the actual file
+
+4)The body => <body> </body> will have all our html content. Everythying in the body will be rendered/shown in the web browser
+
+Parent tag => html container tag
+
+Child tag => head and body are child tags to the parent
+
+sibling tags => head and body are siblings
+
+5)Title tag <title> .... </title> => to hold text and willl be the title of the website => tab name
+
+Other tags 
+A) FOUND IN THE HEAD
+
+1) Meta tag=> defines info about our file => metadata. e.g defining the character set type of our web page, meta description tag to give a description to our website 
+
+When you search something on google and the webpages have a little description about them => meta description tag
+
+<meta charset=......>
+<meta name="....." content="......">
+
+charset, name, content are attributes of the meta tag
+for the second one we are give our meta tag a name and stating what it will contain
+
+B) FOUND IN THE BODY 
+1-Heading tag=> <h1> </h1> , we have till h6 and h1 is the largest with h6 being the smallest.
+    Use them to anounce/ lable/ give a title to a section of a document
+
+2-Paragraph => <p> .......</p> Text here goes in it's own paragraph. As much text as desired can be put here. Generally a block of text.
+
+To style the paragraphs e.g bold =>  <p>I'm <b><another/b> paragraph</p> will display with "another" being bold
+bold => <b></b>
+italics => <i> </i>
+ both => <b> <i>  .....  </i> </b>
+
+THE LAYOUT OF OUR DOCUMENT:   The order in the document => order found in browser
+
+To create WHITE SPACE =>  <br/> and we can use as many as needed
+
+Straight LINE => <hr/> and it goes all the way along the page
+
+To increase the TEXT SIZE => use big ( <big> </big>) and small tags  (  <small> </small>)
+
+SUBSCRIPTS and SUPER SCRIPTS => subs=>  <sub>....</sub>
+                                super=> <sup>...</sup>
+
+COMMENTS =>  <!-- blblablala is invisible -->
+
+STYLING =>            <p  style="color: blue"  >Welcome to some html practice</p>
+           <p  style="background-color: aqua;"  >Welcome to some html practice</p>
+
+ CAN GO ON W3 SCHOOLS TO FIND THE COLORS
+
+
+
+
+
+<!--
+          <h1 >Welcome to some html practice</h1>
+          <hr/>
+          <p>Hi I'm found  in the paragraph</p>
+          <p>I'm <b><another/b> paragraph</p>
+          <p>    <i>Italians</i> can also be written <br/> as <b> <i> Italians </i>  </b>               </p>
+           <p>  <big>I was formatted by the big tag</big> </p> 
+           <p> <small>I was formatted by the small tag</small> </p> 
+
+           <p>  H<sub>2</sub>O </p>
+           <p>  10<sup>2</sup>  </p>
+
+           <p  style="color: blue"  >Welcome to some html practice</p>
+
+           <p  style="background-color: aqua;"  >Welcome to some html practice</p>
+           
+          -->
+    
+
+
+
+
+
+
+
+
+
+ USUALL WEBSITES HAVE 3 SECTIONS => HEADer, Main, FOOTER
+
+Header=> navigation menu
+Main => main website content
+ Footer=> contacts, mails, copyrights
+
+ All 3 above are in the body section
+
+
+    <body>
+        <header> 
+            <!-- navigation menu in nav tag-->
+            <nav>
+
+            </nav>
+
+                <main> <!--main website content here-->
+
+
+
+
+
+                </main>
+
+
+                <footer>
+
+
+                </footer>
+
+    </body>
+
+        </header>
+
+
+LINKS :                 <a href="https://www.allkpop.com/" target="_blank">kpop news</a> and will open in a new web page because we put targer="_blank"
+
+
+
+GO to an image in another wbsite
+                     <a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F3405808%2Fpexels-photo-3405808.jpeg%3Fcs%3Dsrgb%26dl%3Dpexels-valeriia-miller-3405808.jpg%26fm%3Djpg&imgrefurl=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fgrayscale%2F&tbnid=y-DjozBLdels4M&vet=12ahUKEwi3x-b1uJT5AhUdYvEDHZXzCzMQMygFegUIARDDAQ..i&docid=EEme1IJhLtcjKM&w=3024&h=4032&q=grayscale%20image&client=avast-a-2&ved=2ahUKEwi3x-b1uJT5AhUdYvEDHZXzCzMQMygFegUIARDDAQ">Grayscale image</a>
+
+
+Another way => using image tag
+
+
+FAVICON? image next to a tab name   found in head
+
+
+FULL CODE
+
+<!--
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>   
+        <meta charset="UTF-8">
+        <meta name="description" content="This is an awesome website"> 
+
+        <title> Aida's website</title>
+    
+    </head>
+
+
+    <body>
+        <header> 
+          
+            <a href="https://www.youtube.com/watch?v=3OtGm1aM6gQ" target="_blank">Kpop songs</a>
+
+                <main> 
+
+                    <h1 >Welcome to some html practice</h1>
+                    <hr/>
+                    <p>Hi I'm found  in the paragraph</p>
+
+                    <p>I'm <b><another/b> paragraph</p>
+
+                        <a href="https://www.youtube.com/watch?v=3OtGm1aM6gQ" target="_blank">Kpop songs</a>
+
+                    <p>    <i>Italians</i> can also be written <br/> as <b> <i> Italians </i>  </b>               </p>
+                     <p>  <big>I was formatted by the big tag</big> </p> 
+                     <p> <small>I was formatted by the small tag</small> </p> 
+                    
+                     <a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F3405808%2Fpexels-photo-3405808.jpeg%3Fcs%3Dsrgb%26dl%3Dpexels-valeriia-miller-3405808.jpg%26fm%3Djpg&imgrefurl=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fgrayscale%2F&tbnid=y-DjozBLdels4M&vet=12ahUKEwi3x-b1uJT5AhUdYvEDHZXzCzMQMygFegUIARDDAQ..i&docid=EEme1IJhLtcjKM&w=3024&h=4032&q=grayscale%20image&client=avast-a-2&ved=2ahUKEwi3x-b1uJT5AhUdYvEDHZXzCzMQMygFegUIARDDAQ">Grayscale image</a>
+
+                
+
+                     <table style="width:100%;"> 
+                        <tr>  
+                          <th>Company</th>  
+                          <th>Contact</th>
+                          <th>Country</th>
+                        </tr>
+                        <tr>
+                    
+                          <td>Futterkiste</td>
+                          <td> Anders</td>
+                          <td>Germany</td>
+                        </tr>
+                        <tr>
+                          <td>Centro M</td>
+                          <td>Francisco C</td>
+                          <td>Mexico</td>
+                        </tr>
+                      </table>
+
+                      
+              
+                </main>
+
+
+                <footer>
+
+
+                </footer>
+
+
+
+        </header>
+
+
+
+
+
+
+    </body>
+
+</html>     -->

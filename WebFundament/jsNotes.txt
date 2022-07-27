@@ -1,0 +1,19 @@
+ console.log() to output in browser
+
+CONSTANT VALUE => const x=3.1
+
+Variable to change => let x=5 or var x=2
+
+console.log(z)
+
+COMMENTS => //hi i'm a COMMENT
+
+multi comments like c++
+
+Declaring multiple Variables
+let x=2,y=4,z=x+y;
+
+let carName;  => prints undefined on the console
+
+var carName = "Volvo";
+var carName;   => still prints Volvo
