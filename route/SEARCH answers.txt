@@ -1,0 +1,42 @@
+static ip vs dynamic ip
+
+When a device is assigned a static IP address, the address does not change.
+ Most devices use dynamic IP addresses, which are assigned by the network when
+  they connect and change over time.
+
+Static IP addresses are assigned by Internet Service Providers (ISPs). Your ISP
+ may or may not allocate you a static IP address depending on the nature of your 
+ service agreement.
+
+ Dynamic addresses are assigned, as needed, by Dynamic Host Configuration Protocol (DHCP) servers.
+ Deciding whether dynamic or static IP addresses are better for you also depends on the nature of 
+ the connection. A static IP address is more likely to be relevant for a business, while a dynamic
+  IP address is appropriate for a home network
+
+
+-------------------------------------------------------------------------------------------------
+
+
+Public vs Private IP
+
+Both are the two types of IPV4.
+
+Public IP:
+        Public IP addresses can be routed on the Internet, unlike private addresses.
+The presence of a public IP address on your router or computer will allow you to organize
+ your own server (VPN, FTP, WEB, etc.), remote access to your computer, video surveillance 
+ cameras, and get access to them from anywhere on the global network.All public IP addresses 
+ on the Internet are unique to their host or server and cannot duplicate.
+ For home users, an ISP can provide one or more public IP addresses (as a rule, it is a paid service).
+
+
+ Private IP:
+           Private (internal) addresses are not routed on the Internet, and no traffic 
+           can be sent to them from the Internet; they are only supposed to work within
+            the local network. These addresses are intended for use in closed local area networks, 
+            and no one globally controls the allocation of such addresses.
+ Direct access to the Internet from a private IP address is not possible. In this case, the
+  connection to the Internet must go through NAT (Network Address Translation 
+replaces the private IP address with a public one). Private IP addresses within the same 
+local network must be unique and cannot duplicate.
+

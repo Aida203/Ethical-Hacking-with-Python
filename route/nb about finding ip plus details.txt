@@ -1,0 +1,75 @@
+import requests  =>Make a request to a web page
+
+#The GET method indicates that you’re trying to get or retrieve data 
+#from a specified resource. To make a GET request, invoke requests.get().
+#store the return value in a variable so that you can
+#get a closer look at its attributes and behaviors:  => req = requests.get("https://"+ domainName)  
+
+A status code informs you of the status of the request
+
+A 200 OK status means that your request was successful, whereas a 404 NOT FOUND
+status means that the resource you were looking for was not found.
+
+By accessing .status_code, you can see the status code that the server returned: => print(req.status_code)
+
+To see the response’s content in bytes, you use .content: print(req.content)
+
+The response headers can give you useful information, such as the content type of the response payload and a time limit on 
+how long to cache the response. To view these headers, access .headers:=>print(req.headers)
+
+https://realpython.com/python-requests/  (all above info)
+
+--------------------------------------------------------------------------------------------
+
+import socket => Socket programming is a way of connecting two nodes on a network to
+communicate with each other.One socket(node) listens on a particular port at an IP,
+while the other socket reaches out to the other to form a connection
+The server forms the listener socket while the client reaches out to the server. 
+
+We can also find the IP address of a web page using this as follows =>ipAddress = socket.gethostbyname(domainName)
+where the domainName for example ="google.com"
+
+We can print it as such: print(f"Id Address of this domain is {ipAddress}")
+
+------------------------------------------------------------------------------------------
+import json => The json module makes it easy to parse JSON strings and files containing JSON object.
+
+And remember API's? 
+::::::::API  (  https://www.ibm.com/cloud/learn/api  )
+      API is the acronym for Application Programming Interface, which is a software intermediary that 
+      allows two applications to talk to each other. Each time you use an app like Facebook,
+       send an instant message, or check the weather on your phone, you’re using an API.
+
+       APIs sit between an application and the web server, acting as an intermediary layer 
+       that processes data transfer between systems.
+
+       Here’s how an API works:
+
+A client application initiates an API call to retrieve information—also known as a request.
+This request is processed from an application to the web server via the API’s 
+Uniform Resource Identifier (URI) and includes a request verb, headers, and sometimes,
+ a request body.After receiving a valid request, the API makes a call to the external 
+ program or web server.The server sends a response to the API with the requested information.
+The API transfers the data to the initial requesting application
+
+While the data transfer will differ depending on the web service being used, this process of 
+requests and response all happens through an API. Whereas a user interface is designed for use
+by humans, APIs are designed for use by a computer or application.
+
+Traditionally, API referred to an interface connected to an application that may have been created 
+with any of the low-level programming languages, such as Javascript. The modern API adheres to REST
+ principles and the JSON format and is typically built for HTTP, resulting in developer-friendly 
+ interfaces that are easily accessible and widely understood by applications written in Java, Ruby,
+  Python, and many other languages.
+
+
+----------------------------------------------------------------------------------------------
+
+
+
+We can also get info about an ip :
+req = requests.get("https://ipinfo.io/"+ipAddress+"/json")
+then => result = json.loads(req.text) to retrieve the readable part of the info
+
+then => print(result)
+
