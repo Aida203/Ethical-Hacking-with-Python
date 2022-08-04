@@ -1,0 +1,229 @@
+API (https://www.redhat.com/en/topics/api/what-is-a-rest-api)
+*You can think of an API as a mediator between the users or clients and the resources 
+or web services they want to get. It’s also a way for an organization to share resources
+ and information while maintaining security, control, and authentication—determining who 
+ gets access to what. 
+
+*Another advantage of an API is that you don’t have to know the specifics of caching—how 
+your resource is retrieved or where it comes from.
+
+------------------------------------------------------------------------------------------
+
+REST API
+*a set of architectural constraints
+*JSON is the most generally popular file format to use 
+*Headers and parameters are also important in the HTTP methods of a RESTful API HTTP request,
+ as they contain important identifier information as to the request's metadata, authorization,
+  uniform resource identifier (URI), caching, cookies, and more. There are request headers and
+   response headers, each with their own HTTP connection information and status codes.
+
+SOME CHARACTERISTICS OF A RESTful API
+*Must have a client-server architecture  composed of:
+        clients
+        servers
+        resources
+        requests managed through HTTP
+
+*Stateless client-server communication => no client info stored between get requests with these 
+requests being separated and unconnected.
+
+*A layered system which organizes server types (those responsible for security, load-balancing, etc.)
+ involved the retrieval of requested information into hierarchies, invisible to the client.
+
+*This program's script searches for instances of DVWA which was made made developers to be vulnerable by design
+ and reports them for the purpose of security testing.
+
+*To avoid having to go through the installation process, running instances of this DVWA will be located
+on the internet. This will be done using (google operators) the "title" though different other ways exist such as:
+        site:insertTheUrlHere   => find results for a specific urls
+        cache:insertTheUrlHere  => gets the cached version of the page
+        related:insertTheUrlHere   => find related pages to our url
+        src:insertTheUrlHere   =>find pages which reference our url
+        imagesize:1200x800 => find pages with images of the specified dimension
+
+
+-The challenge is having to check login credentials for all of these instances.
+
+LOGIN CREDENTIALS(https://www.fortinet.com/resources/cyberglossary/login-credentials):
+   A username and password combination used for logging in to online accounts.
+However, they can be combined with more secure authentication tools and biometric elements(fingerprint,
+face, or voice) to confirm user identities with a greater degree of certainty.
+
+
+---------------------------------------------------------------------------------------------
+A)
+import Shodan => official Python wrapper around both the Shodan REST API as well as the 
+experimental Streaming API.It also lets you search for exploits using the Shodan Exploits
+ REST API. This library provides developers easy access to all of the data stored in Shodan 
+ in order to automate tasks and integrate into existing tools.(https://securityonline.info/shodan-python/)
+
+import time =>This module provides various time-related functions. (https://docs.python.org/3/library/time.html)
+
+import requests  =>The requests module allows you to send HTTP requests using Python.
+
+import re => Regular expression operations.  => is a sequence of characters that forms a search pattern and 
+            can be used to check if a string contains the specified search pattern. (https://www.w3schools.com/python/python_regex.asp)
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------
+B)
+
+Key=input("Enter your Shodan API key \n")
+
+#Getting an api key from the user
+#The user must have created an account in the Shodan to be able to have a key
+
+
+
+
+api_object=Shodan.Shodan(Key)
+Initialize an api object with the key
+
+---------------------------------------------------------------------------------------------------------------------
+
+Post the API initialization we are now able to make research using the shodan search engine asfollows.
+
+*The code will be in a loop as it facilitates in case of network errors (https://www.pcerror-fix.com/fix-common-error-messages-computer-networks) 
+or API errors such as using http:// instead of https:// when testing an API as some API's may only support the https while others 
+support http, some redirect all the http to their 
+https counterparts.
+
+Some API errors :  (https://nordicapis.com/best-practices-api-error-handling/),      (https://blog.runscope.com/posts/6-common-api-errors)
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+C)
+
+
+ Wrap the request in a try/ except block to catch errors
+
+
+api_Ke.search() =>uses the Shodan search instead of host(Domain Name Sysytem, DNS) lookup and returns a dictionary of result information
+
+if found then return the running instances of the page ,    EACH PAGE RESULTS CONTAIN 100
+
+Remember "instances" holds a dictionary of all currently running instances of the DVWA
+
+(https://developer.shodan.io/api)
+else => except block:
+                catch any api type of error and print them out, then wait for 5secs 
+                => The number of seconds the Python program should pause execution. This argument should be either an int or float.
+
+                (https://www.pythoncentral.io/pythons-time-sleep-pause-wait-sleep-stop-your-code/)
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+D)
+
+To see what Shodan has available on a specific IP we can use the Shodan.host() function:
+
+We'll make a fxn which takes a host and checks basic credentials are valid. This is done through the request library for submitting these credentials 
+and check results
+
+The checking is done one of the instances to act as "a user trying credentials"
+
+CSRF tokens: (https://portswigger.net/web-security/csrf/tokens)
+A CSRF token is a unique, secret, unpredictable value that is generated by the server-side application and transmitted to the client in 
+such a way that it is included in a subsequent HTTP request made by the client. When the later request is made, the server-side application 
+validates that the request includes the expected token and rejects the request if the token is missing or invalid.
+CSRF tokens can prevent CSRF attacks by making it impossible for an attacker to construct a fully valid HTTP request suitable for feeding 
+to a victim user. Since the attacker cannot determine or predict the value of a user's CSRF token, they cannot construct a request with all
+ the parameters that are necessary for the application to honor the request.
+
+
+To simulate a user we'll visit the login.php page to get the token and try to login 
+
+
+Session objects:  if you’re making several requests to the same host, the underlying TCP connection will be reused, 
+which can result in a significant performance increase.A Session object has all the methods of the main Requests API.
+ can also be used to provide default data to the request methods. 
+ (https://requests.readthedocs.io/en/latest/user/advanced/)
+   
+    s=requests.session()
+
+
+ SSL / TLS :
+ SSL is an acronym for Secure Sockets Layer. A type of digital security that allows encrypted communication
+between a website and a web browser. The technology is currently deprecated and has been replaced entirely by TLS.
+TLS stands for Transport Layer Security and it ensures data privacy the same way that SSL does. 
+The goal of SSL/TLS is to make it safe and secure to transmit sensitive information including personal data, payment
+or login information
+
+p=('ssl' in instance) and 'https' or 'http' to make our api support both http and https but ensure that it has ssl
+
+=> we are only dealing with secure instsances
+
+        response=s.get(f"{p}://{instance['ip_str']}:{instance['port']}/login.php",verify=False)
+ =>get a response for the url without verification
+
+if any errors then :
+                    requests.exceptions.ConnectionError:=> incase of any network failures return False
+
+if  response.status_code!=200 => as long as the status code is not 200 then print the status code obtained then return False
+
+------------------------------------------------------------------------------------------------------------------
+
+
+
+E)
+
+else then everything is correct and we have to get the token using regex
+
+
+ token=re.search(r"user_token value='([0-9a-f]+'", response.text).group(1)
+
+=>  re.search(pattern, string, flags=0)   (https://docs.python.org/3/library/re.html)
+Scan through string looking for the first location where the regular expression pattern produces a match, 
+and return a corresponding match object. Return None if no position in the string matches the pattern; note
+ that this is different from finding a zero-length match at some point in the string.
+
+
+The "group" feature of a regular expression allows you to pick out parts of the matching text.
+
+
+s.Post() where post is a http method   (https://realpython.com/python-requests/#content)
+
+
+
+
+s.post(f"{p}://{instance['ip_str']}:{instance['port']}/login.php",   =>Didn't get this part
+        f"username=admin&password=password&user_token={token}&Login=Login",
+        allow_redirects=False,    => no redirecting /pop ups from the current page
+        verify=False,   => no checking
+        headers={'Content-Type': 'application/x-www-form-urlencoded'})
+
+
+ sends a POST request with the default username, password, and the CSRF token, and then it checks whether the authentication was successful
+
+-------------------------------------------------------------------------------------------------------------------------
+F 
+=> all went well and the login was successful else return false too
+
+
+
+-------------------------------------------------------------------------------------------------------
+G)
+process_page(page):
+# Takes a page of results, and scans each of them, running has_valid_credentials
+=> through each of these results check if itvalidates thes credentials with our fxn
+
+
+
+H)
+Searching on shodan using the given query, and iterates over each page of the results
+
