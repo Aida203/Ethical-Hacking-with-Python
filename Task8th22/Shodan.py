@@ -86,7 +86,7 @@ def Query_shodan(query):
     while already_processed < total:   #Number of pages already checked
         # break just in your testing, API queries have monthly limits   ????????????????????????????
         break
-        print("querying page {page}")
+        print(f"querying page {page}")
         page = request_page_from_shodan(query, page=page)
         already_processed += len(page['matches'])
         result += process_page(page)

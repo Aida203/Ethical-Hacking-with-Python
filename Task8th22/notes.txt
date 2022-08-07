@@ -227,3 +227,12 @@ process_page(page):
 H)
 Searching on shodan using the given query, and iterates over each page of the results
 
+
+
+
+
+
+
+
+
+
