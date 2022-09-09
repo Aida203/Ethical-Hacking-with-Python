@@ -1,0 +1,54 @@
+code for accessing cmd with visual studio
+
+web fundamentals
+
+
+code to do:fibonachi program
+	combination formula
+	sets,tuples
+	closures   (see short programs)
+
+
+difference between sets, tuples, lists, dictionary(see short programs)
+
+
+we had a task on accessing a website using beautiful soup
+
+
+background color generator eith two button which when clicked on will change the bg color
+
+modify random password generator code by varying % of content
+
+oop we had exos: https://www3.ntu.edu.sg/home/ehchua/programming/java/j3f_oopexercises.html
+1.1
+1.3
+1.4
+1.6
+
+we used the route library while dealing with beautifulsoup for getting links i think
+
+differences between:active and passive info gathering
+		fingerprinting vs reconaisance
+
+
+
+*how to search using google operators
+*shodan: Shodan.api   => https://www.thepythoncode.com/article/using-shodan-api-in-python    understand code here extremely well
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+To style websites with html
+
+1)Text color
+Inline styles => put on the element itself
+This will display the text in blue
+
+2)Using CSS selectors to style elements (style block)
+
+(see the html with css)
+
+(in body part)
+ 
+            will style all paragraphs with that color
+
+
+
+
+
+FULL HTML CODE ON WHICH CSS WAS APPLIED
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>   
+        <meta charset="UTF-8">
+        <meta name="description" content="This is an awesome website"> 
+
+
+        <link rel="stylesheet" href="style.css">
+
+
+        <title> Aida's html and css website</title>
+       
+
+    </head>
+
+
+    <body>
+
+            <a href="https://www.youtube.com/watch?v=3OtGm1aM6gQ" target="_blank">Kpop songs</a>
+
+         
+
+
+
+
+                    <h1 >Welcome to some html and css practice</h1>
+                    <hr/>
+                    <p>Hi I'm found  in the paragraph</p>
+<hr/>
+
+                     <table style="width:100%;"> <!-- to contain the whole table-->
+                        <tr>  <!-- table row tag-->
+                          <th>Company</th>  <!-- table head tags represented by th -->
+                          <th>Contact</th>
+                          <th>Country</th>
+                        </tr>
+                        <tr>
+                    
+                          <td>Futterkiste</td>
+                          <td> Anders</td>
+                          <td>Germany</td>
+                        </tr>
+                        <tr>
+                          <td>Centro M</td>
+                          <td>Francisco C</td>
+                          <td>Mexico</td>
+                        </tr>
+                      </table>
+
+                      
+              
+                      <a href="https://www.youtube.com/watch?v=3OtGm1aM6gQ" class="button" >Kpop songs again!</button>
+
+
+
+
+
+    
+
+
+
+
+
+    </body>
+
+</html>
+
+

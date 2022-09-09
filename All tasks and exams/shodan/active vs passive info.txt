@@ -1,0 +1,44 @@
+To break in to a sysem for penetration testion we need to know entry points and any vulnerabilities in these entry points.
+Ths is done through info gathering.
+
+Two main steps :   
+                    passive information gathering
+                    active information gathering
+
+passive:
+        info gathering done publicly available resources( Open source intelligence, OSINT) such as search engines,google hacking.
+        no direct interaction with the target.
+        no requests sent to target => target ignores info is being gathered about them.
+        info such as Ip addresses, domain names,email addresses, names,hostnames,dns records,software running on a website,
+        etc can be gathered through this method.
+ 
+
+Passive info gathering tools:
+
+    ***google hacking database => to access hidden files, metadata,usernames,passwords,etc
+   
+    ***netcraft => finds info related to domains network, ssl/tls, hosting history, owner, domain registrar,etc
+    
+    ***shodan=> identifies IOT devices and network devices over the internet.Gives info about potential vulnerabilities,
+    ISP,hostnames,open ports, SSL, encryption algos,etc
+
+
+active:
+       without authorization and be illegal. Can be done by actively interacting with the target, port scanning,
+       OS fingerprinting.
+       relies on tools which will send different requests to the computer sysem to gather system specific info about the target.
+       gathers info about the device or other devices connected to it on the same network.
+       info like open/closed ports, OS of a machine, services that are running,finding vulnerabilities in apps, etc
+
+       Disadvantage of active info gathering:  direct internet with host has a chance of trigerring the system's IDS/IPS and
+       alerting people to your activity.
+
+
+active info gathering tools:
+                nmap: network mapper and port scanner
+
+                nessus: commercial vulnerability scanner.
+
+                nikito: identifies vulnerabilitieson web servers
+
+

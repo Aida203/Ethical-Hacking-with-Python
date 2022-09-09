@@ -1,0 +1,44 @@
+webinstructor19@gmail.com
+
+
+pillars of oop: encapsulation, abstraction, inheritance, polymorphism(overload => same fxn name different parameter list,override => same fxn name and different implementation details)
+
+python does not support overload bc 
+
+constructor here is not void nor returns values. constructor in python:  def __init__():edcjoc
+
+default constr=> constr with no par
+
+self =>references to the current object you're currently working with
+
+
+str method in classes?
+
+
+Alll methods dealing with instance members MUST have self in parameter
+
+NO public nor private keywords in py
+
+
+none if you're printing a function instead of calling it
+
+Yes supports multiple inheritance
+
+
+
+CHECK THIS :
+https://www3.ntu.edu.sg/home/ehchua/programming/java/j3f_oopexercises.html
+
+
+1.1
+1.3
+1.4
+1.6
+
+
+https://github.com/webinstructor19/PythonOop
+
+
+
+
+ 

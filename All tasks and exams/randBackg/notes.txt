@@ -1,0 +1,35 @@
+
+HTTP(Hypertext Transfer Protocol) Methods:
+        GET =>to request data from a specific source
+        POST=>send data to a server to create or update a resurce
+
+Unlike get,post can not be cached,data not displayed on url, safer  and parameters don't remain in the browser history
+
+        PUT=> send data to a server to createupdate a resource
+
+        HEAD=>like get but without the response body( a list of users is returned with get method)
+
+        DELETE =>deletes a specifies source
+        PATCH=>apply partial modifications to a resource
+        OPTIONS=>describes communication options for the target resource
+        CONNECT=>start two-way communications/a tunnel with requested resource
+        TRACE=>performs message loop-back tests to test the path for the specified resource. Good for debugging.       
+
+        
+API(Application Programming Interface)
+        A code which controls a server's access point(s)
+Give users tthe ability to make an API call or request for info.
+It's like the menu of a restaurant with the list of all dishes together with their description.
+
+         An api is a list of a group of operations used by developers for their apps without necessarily knowing the history and complexity behind their functionalities.
+
+
+
+JSON(javascript object notation):
+         a way of representing data which looks like js objects
+         I an API returns json then this can be accesed by java,python, ruby,php,js,etc
+=> API's are highly scalable an platform independent.
+
+        
+
+
